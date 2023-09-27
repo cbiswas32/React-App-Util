@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Textutil from './components/Textutil';
+import About from './components/About';
 
 function App() {
+  const [mode, setMode] = useState('dark');
+  const handleToggleMode = () => {
+    if(mode==='dark'){
+      document.body.style.backgroundColor = '#404040';
+      document.body.style.color = '#ffffff';
+    }
+    else{
+      document.body.style.backgroundColor = '#ffffff';
+      document.body.style.color = '#404040';
+    }
+    setMode(mode==='light'?'dark':'light');
+    
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router> 
+        <Navbar title="TextUtils Chinmoy" currentMode={mode}  handleToggleMode = {handleToggleMode}/>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <div className="container mt-5">
+              <Textutil headerTitle = "Enter the text to see the magic" currentMode={mode}/>
+            </div>
+          </Route>
+        </Switch>   
+      </Router>      
   );
 }
 
