@@ -20,6 +20,12 @@ export default function Navbar({title, currentMode, handleToggleMode}) {
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/subscribe">Subscribe</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/news">News</Link>
+              </li>
             </ul>
             <form className="d-flex">
             <div className="form-check form-switch">

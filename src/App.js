@@ -8,6 +8,8 @@ import {
 import Navbar from './components/Navbar';
 import Textutil from './components/Textutil';
 import About from './components/About';
+import Subscribe from './components/Subscribe';
+import NewsContainer from './components/NewsContainer';
 
 function App() {
   const [mode, setMode] = useState('dark');
@@ -27,6 +29,12 @@ function App() {
       <Router> 
         <Navbar title="TextUtils Chinmoy" currentMode={mode}  handleToggleMode = {handleToggleMode}/>
         <Switch>
+          <Route path="/news">
+            <NewsContainer />
+          </Route>
+          <Route path="/subscribe">
+            <Subscribe />
+          </Route>
           <Route path="/about">
             <About />
           </Route>

@@ -1,0 +1,31 @@
+.formInput{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput label{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.formInput input{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.formInput .errormsg{
+    max-width: 250px;
+    font-size: 12px;
+    color: red;
+    padding-top: 5px;
+    display: none;
+}
+.formInput input:invalid[focused ="true"] ~ .errormsg{
+    display: block;
+}
+

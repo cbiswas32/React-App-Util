@@ -1,0 +1,32 @@
+.subscribe-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(228, 228, 221,0.7), rgba(53, 53, 51,0.3)),  
+    url("https://images.freeimages.com/images/large-previews/e30/forest-1402418.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.subscribe-container form{
+    background: white;
+    padding: 35px 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.subscribe{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(163, 10, 105);
+    color: white;
+    border-radius: 10px ;
+}
