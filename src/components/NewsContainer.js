@@ -88,7 +88,7 @@ export class NewsContainer extends Component {
   render() {
     return (
       <>
-      <div className="text-center mb-4"><h2>Ultra News </h2> <h3>Get your daily dose of information! </h3></div> 
+      <div className="text-center mb-4" style={{marginTop:"100px !important"}}><h2>Ultra News </h2> <h3>Get your daily dose of information! </h3></div> 
       {this.state.isLoading &&  <Loading/>}
       <div className="d-flex justify-content-around flex-wrap" style={{margin:"10px 20%"}}>
       {(this.state.article && !this.state.isLoading) && this.state.article.map((element) => {

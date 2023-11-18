@@ -26,6 +26,12 @@ export default function Navbar({title, currentMode, handleToggleMode}) {
               <li className="nav-item">
                 <Link className="nav-link" to="/news">News</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/unlimitednews">Unlimited News</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/plusminus">Redux Demo</Link>
+              </li>
             </ul>
             <form className="d-flex">
             <div className="form-check form-switch">

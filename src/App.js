@@ -10,6 +10,8 @@ import Textutil from './components/Textutil';
 import About from './components/About';
 import Subscribe from './components/Subscribe';
 import NewsContainer from './components/NewsContainer';
+import UnlimitedNews from './components/UnlimitedNews';
+import IncrementDecrement from './components/reduxtutorial/IncrementDecrement';
 
 function App() {
   const [mode, setMode] = useState('dark');
@@ -29,6 +31,12 @@ function App() {
       <Router> 
         <Navbar title="TextUtils Chinmoy" currentMode={mode}  handleToggleMode = {handleToggleMode}/>
         <Switch>
+        <Route path="/plusminus">
+            <IncrementDecrement />
+          </Route>
+        <Route path="/unlimitednews">
+            <UnlimitedNews />
+          </Route>
           <Route path="/news">
             <NewsContainer />
           </Route>
